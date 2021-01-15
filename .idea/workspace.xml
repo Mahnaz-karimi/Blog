@@ -2,22 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="939aa63d-ec06-4724-af3e-75e7396b0665" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Login_whistleblowerordning.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LOGIN_projcet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/LOGIN_projcet/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LOGIN_projcet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/LOGIN_projcet/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repport/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/repport/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repport/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/repport/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repport/templates/repport/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/repport/templates/repport/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repport/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/repport/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repport/templates/repport/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/repport/templates/repport/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +34,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -75,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610592621569</updated>
-      <workItem from="1610592626704" duration="10090000" />
+      <workItem from="1610592626704" duration="25846000" />
     </task>
     <servers />
   </component>
