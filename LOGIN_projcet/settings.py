@@ -127,3 +127,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4' # hvilken css frame work vi vil bruge
 LOGIN_REDIRECT_URL ='repport-home' # configurere når man efter login så vil redirktet to home page. det er vigtigt man skriver login og ikke logout
 LOGIN_URL = 'login' #  laver en sti til login url for at django ikke bruger sin egen sti til at redirect til log in side
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

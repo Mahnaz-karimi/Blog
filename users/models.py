@@ -1,4 +1,10 @@
-from django.contrib import admin
+from django.db import models
+from django.contrib.auth.models import User
 
-# her kan vi Register vores model for at vises in vores admin page.
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE) # cascade mener hvis en bruger bliver slettet så vil profilen også bliver slettet
+    image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+
+    def __str__(self):
+        return f'{self.user.username} Profile' # efter username vil program printe også profilen
