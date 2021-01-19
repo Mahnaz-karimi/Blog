@@ -10,5 +10,18 @@
         </div>
       </div>
       <!-- FORM HERE -->
+
+      <form method="POST" enctype="multipart/form-data"> # vi skal huske den "enctype" ellers form er som om at fungirere men vil ikke gemme billede i backgrand!
+        {% csrf_token %}  <!-- sikre hejmmesiden -->
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4"> Profile info </legend>
+           <!--   vil hente formen som a paragraf tekst men efter at bruge cripsy, har vi ikke bruge for .as_ p form.as_p-->
+            {{ u_form|crispy}} <!-- bruge vertical bar charcter for at bruge a filter. form vil prinetes ud og her har brugt crispy forms tags -->
+            {{ p_form|crispy}} <!-- en gang for user og en gang for profil så vil vi ha to forms med forskellige felt-->
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Update</button>
+        </div>
+      </form>
     </div>
 {% endblock content %}

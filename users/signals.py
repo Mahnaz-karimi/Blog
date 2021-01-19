@@ -11,5 +11,5 @@ def create_profile(sender, instance, created, **kwargs):
 
 
 @receiver(post_save, sender=User) # efter at skab en profil så vil gemmes med den methode
-def save_profile(sender, instance, **kwargs):
+def save_profile(sender, instance, **kwargs): # **kwargs undtager hver ekstra tegn til funktion
     instance.profile.save()# instance er user

@@ -2,9 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 #from .forms import UserCreationForm  # django har en indbygget form for registration
 #from django.contrib.auth.forms import UserCreationForm # django har en indbygget form for registration
-from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
-
+from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 def register (request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -20,4 +19,24 @@ def register (request):
 
 @login_required # login side vil krævs brugeren har logget ind  for at vise profile side. en decorator adder en funktion til en ekstierne funktion
 def profile(request):
-    return render(request, 'users/profile.html')
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user) # vil ha user name og email
+        p_form = ProfileUpdateForm(request.POST,
+                                   request.FILES,
+                                   instance=request.user.profile) # vil ha users billede så derfor bruger request.FILES
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            messages.success(request, f'Your account has been updated!')
+            return redirect('profile')
+
+    else:
+        u_form = UserUpdateForm(instance=request.user) # instance gøre det at aktuelt navn og email vil vises
+        p_form = ProfileUpdateForm(instance=request.user.profile) # instance gøre det at aktuelt image navn vises
+
+    context = {
+        'u_form': u_form,
+        'p_form': p_form
+    }
+
+    return render(request, 'users/profile.html', context)
