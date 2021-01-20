@@ -4,12 +4,9 @@
         <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}"> <!--den vil vise billed af den user som har oploadet under hver post i home page.-->
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="#">{{ object.author }}</a>
+              <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a> <!--i detail page bruger bi object og ikke post-->
               <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
-                <!-- den tegn filtrere som her vil filter date,
-                vi giver en format til date gennem se django date documentation . der skal ikke stå noget mellemrum-->
-                <!-- https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#date -->
-
+                <!-- den tegn filtrere som her vil filter date -->
                 {% if object.author == user %}
                   <div>
                     <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>

@@ -1,5 +1,6 @@
 from .models import Post # . menes directory to the models.
-from django.shortcuts import render
+from django.contrib.auth.models import User
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin # mix in sikre os at user autorotiet
 from django.views.generic import (
     ListView,
@@ -24,13 +25,23 @@ class PostListView(ListView):
     template_name = 'repport/home.html'  # <app>/<model>_<viewtype>.html  PostListView.as_view() med den mens <app> / <model>_<vietype> html- app er ligsom vores repport app. model er database og vieetype er list.
     context_object_name = 'posts'
     ordering = ['-date_posted'] # med - vil nyeste post vil stå først
+    paginate_by = 5
 
+class UserPostListView(ListView):
+    model = Post
+    template_name = 'repport/user_posts.html'  # <app>/<model>_<viewtype>.html
+    context_object_name = 'posts'
+    paginate_by = 5
+
+    def get_queryset(self): # queryset er et ord ellers vil vi få fejl med at læse antal post for hver brugeren
+        user = get_object_or_404(User, username=self.kwargs.get('username')) # kwargs er query paramater
+        return Post.objects.filter(author=user).order_by('-date_posted')
 
 class PostDetailView(DetailView):
     model = Post
 
 
-class PostCreateView(LoginRequiredMixin, CreateView):# her vil vi inherit fra login som krav. når vi vil se postes skal user være logget ind ellers vil den redirctet to login side
+class PostCreateView(LoginRequiredMixin, CreateView):# mix er brugeren autoritet- her vil vi inherit fra login som krav. når vi vil se postes skal user være logget ind ellers vil den redirctet to login side
     model = Post
     fields = ['title', 'content']
 
@@ -39,7 +50,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):# her vil vi inherit fra lo
         return super().form_valid(form)
 
 
-class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView): # add mixin helping også at posts skaberen får lov til update post
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView): # add mixin hjælper os at postens skaberen får lov til update post
     model = Post
     fields = ['title', 'content']
 
