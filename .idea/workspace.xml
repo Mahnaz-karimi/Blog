@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="939aa63d-ec06-4724-af3e-75e7396b0665" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/posts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repport/templates/repport/user_posts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/templates/users/password_reset_confirm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LOGIN_projcet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/LOGIN_projcet/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LOGIN_projcet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/LOGIN_projcet/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repport/templates/repport/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/repport/templates/repport/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repport/templates/repport/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/repport/templates/repport/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repport/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/repport/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repport/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/repport/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repport/templates/repport/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/repport/templates/repport/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +125,10 @@
       <workItem from="1611083743195" duration="6000" />
       <workItem from="1611083864600" duration="39000" />
       <workItem from="1611083938292" duration="34000" />
-      <workItem from="1611100523362" duration="8965000" />
+      <workItem from="1611100523362" duration="13502000" />
+      <workItem from="1611202626879" duration="6406000" />
+      <workItem from="1611256307474" duration="2176000" />
+      <workItem from="1611278464578" duration="877000" />
     </task>
     <servers />
   </component>
